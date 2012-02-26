@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+  <title>☮ Nyan ☯</title>
+  <script src="modernizr-min.js"></script>
+</head>
+<body>
+
+<script>
+Modernizr.load({
+  load: ["http://nyan.herpderp.fi:8082/socket.io/socket.io.js"],
+  complete: function() {
+    window.socket = io.connect('http://nyan.herpderp.fi:8082');
+    Modernizr.load('nyanstars.js');
+  }
+});
+</script>
+</body>
+</html>
