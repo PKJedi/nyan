@@ -25,7 +25,9 @@ io.configure('production', function() {
   io.set('origins', '*:*');
 });
 
-server.listen(8082);
+var port = parseInt(process.argv[2], 10);
+
+server.listen(port);
 
 var nyan = (function() {
   var screens = [];
